@@ -4,6 +4,28 @@ package:
   name: eksctl
 
 advisories:
+  - id: CVE-2019-25210
+    aliases:
+      - GHSA-jw44-4f3j-q396
+    events:
+      - timestamp: 2024-03-06T07:08:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: eksctl
+            componentID: bd323c423151dd00
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.2
+            componentType: go-module
+            componentLocation: /usr/bin/eksctl
+            scanner: grype
+      - timestamp: 2024-03-26T16:35:18Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
+
   - id: CVE-2023-45283
     aliases:
       - GHSA-vvjp-q62m-2vph
@@ -23,6 +45,24 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CVE-2023-45289
+    aliases:
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T07:13:41Z
+        type: fixed
+        data:
+          fixed-version: 0.173.0-r1
+
+  - id: CVE-2023-45290
+    aliases:
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T07:13:42Z
+        type: fixed
+        data:
+          fixed-version: 0.173.0-r1
 
   - id: CVE-2023-48795
     aliases:
@@ -45,6 +85,63 @@ advisories:
         data:
           fixed-version: 0.167.0-r1
 
+  - id: CVE-2024-24557
+    aliases:
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-21T11:17:05Z
+        type: fixed
+        data:
+          fixed-version: 0.174.0-r1
+
+  - id: CVE-2024-24783
+    aliases:
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T07:13:43Z
+        type: fixed
+        data:
+          fixed-version: 0.173.0-r1
+
+  - id: CVE-2024-24784
+    aliases:
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T07:13:44Z
+        type: fixed
+        data:
+          fixed-version: 0.173.0-r1
+
+  - id: CVE-2024-24785
+    aliases:
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T07:13:45Z
+        type: fixed
+        data:
+          fixed-version: 0.173.0-r1
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:19:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: eksctl
+            componentID: 883c904c5dfcf80c
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/eksctl
+            scanner: grype
+      - timestamp: 2024-03-15T15:54:01Z
+        type: fixed
+        data:
+          fixed-version: 0.173.0-r2
+
   - id: CVE-2024-25620
     aliases:
       - GHSA-v53g-5gjp-272r
@@ -61,6 +158,19 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/eksctl
             scanner: grype
+      - timestamp: 2024-02-23T07:48:38Z
+        type: fixed
+        data:
+          fixed-version: 0.172.0-r1
+
+  - id: CVE-2024-26147
+    aliases:
+      - GHSA-r53h-jv2g-vpx6
+    events:
+      - timestamp: 2024-02-23T07:48:37Z
+        type: fixed
+        data:
+          fixed-version: 0.172.0-r1
 
   - id: GHSA-7ww5-4wqc-m92c
     events:

@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: oauth2-proxy
@@ -73,6 +73,48 @@ advisories:
         type: fixed
         data:
           fixed-version: 7.5.1-r8
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T16:16:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: oauth2-proxy
+            componentID: c9ab2e6903d02407
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/oauth2-proxy
+            scanner: grype
+      - timestamp: 2024-03-16T11:02:24Z
+        type: fixed
+        data:
+          fixed-version: 7.6.0-r3
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:04:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: oauth2-proxy
+            componentID: 8d9a0813da1c692e
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/oauth2-proxy
+            scanner: grype
+      - timestamp: 2024-03-08T22:31:38Z
+        type: fixed
+        data:
+          fixed-version: 7.6.0-r2
 
   - id: GHSA-2c7c-3mj9-8fqh
     events:

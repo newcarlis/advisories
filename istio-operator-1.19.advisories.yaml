@@ -4,6 +4,28 @@ package:
   name: istio-operator-1.19
 
 advisories:
+  - id: CVE-2019-25210
+    aliases:
+      - GHSA-jw44-4f3j-q396
+    events:
+      - timestamp: 2024-03-06T07:10:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.19
+            componentID: 3f9e5ce749ddac88
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.2
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+      - timestamp: 2024-03-26T16:35:18Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
+
   - id: CVE-2019-3826
     aliases:
       - GHSA-3m87-5598-2v4f
@@ -98,6 +120,31 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/operator
             scanner: grype
+      - timestamp: 2024-02-24T17:03:16Z
+        type: fixed
+        data:
+          fixed-version: 1.19.7-r1
+
+  - id: CVE-2024-26147
+    aliases:
+      - GHSA-r53h-jv2g-vpx6
+    events:
+      - timestamp: 2024-02-23T07:21:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.19
+            componentID: d9aa68be3258c586
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.12.2
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+      - timestamp: 2024-02-24T17:03:16Z
+        type: fixed
+        data:
+          fixed-version: 1.19.7-r1
 
   - id: GHSA-6xv5-86q9-7xr8
     events:
@@ -106,6 +153,21 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: This CVE only affects Windows users
+
+  - id: GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:17:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.19
+            componentID: 0bdfc2b42062fc77
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
 
   - id: GHSA-jq35-85cj-fj4p
     events:

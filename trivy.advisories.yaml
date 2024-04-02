@@ -4,6 +4,28 @@ package:
   name: trivy
 
 advisories:
+  - id: CVE-2019-25210
+    aliases:
+      - GHSA-jw44-4f3j-q396
+    events:
+      - timestamp: 2024-03-06T07:23:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trivy
+            componentID: eeafdd625b2ac002
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.2
+            componentType: go-module
+            componentLocation: /usr/bin/trivy
+            scanner: grype
+      - timestamp: 2024-03-26T16:35:18Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
+
   - id: CVE-2023-45283
     aliases:
       - GHSA-vvjp-q62m-2vph
@@ -138,6 +160,24 @@ advisories:
         data:
           fixed-version: 0.49.0-r1
 
+  - id: CVE-2024-24557
+    aliases:
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-21T12:46:40Z
+        type: fixed
+        data:
+          fixed-version: 0.50.0-r1
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T15:19:46Z
+        type: fixed
+        data:
+          fixed-version: 0.49.1-r5
+
   - id: CVE-2024-25620
     aliases:
       - GHSA-v53g-5gjp-272r
@@ -158,6 +198,36 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.49.1-r1
+
+  - id: CVE-2024-26147
+    aliases:
+      - GHSA-r53h-jv2g-vpx6
+    events:
+      - timestamp: 2024-02-23T07:47:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trivy
+            componentID: 3161729910565a72
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.1
+            componentType: go-module
+            componentLocation: /usr/bin/trivy
+            scanner: grype
+      - timestamp: 2024-02-24T08:09:23Z
+        type: fixed
+        data:
+          fixed-version: 0.49.1-r2
+
+  - id: CVE-2024-29018
+    aliases:
+      - GHSA-mq39-4gv4-mvpx
+    events:
+      - timestamp: 2024-03-21T12:46:38Z
+        type: fixed
+        data:
+          fixed-version: 0.50.0-r1
 
   - id: GHSA-7ww5-4wqc-m92c
     events:

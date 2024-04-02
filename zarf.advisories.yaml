@@ -4,6 +4,28 @@ package:
   name: zarf
 
 advisories:
+  - id: CVE-2019-25210
+    aliases:
+      - GHSA-jw44-4f3j-q396
+    events:
+      - timestamp: 2024-03-06T07:32:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zarf
+            componentID: 819d89025d5f85ed
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.2
+            componentType: go-module
+            componentLocation: /usr/bin/zarf
+            scanner: grype
+      - timestamp: 2024-03-26T16:35:18Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
+
   - id: CVE-2023-45283
     aliases:
       - GHSA-vvjp-q62m-2vph
@@ -87,6 +109,27 @@ advisories:
         data:
           fixed-version: 0.32.3-r0
 
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:34:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zarf
+            componentID: 92dd2a1a46e9d9e8
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/zarf
+            scanner: grype
+      - timestamp: 2024-03-08T10:44:21Z
+        type: fixed
+        data:
+          fixed-version: 0.32.4-r2
+
   - id: CVE-2024-25620
     aliases:
       - GHSA-v53g-5gjp-272r
@@ -107,6 +150,48 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.32.3-r1
+
+  - id: CVE-2024-26147
+    aliases:
+      - GHSA-r53h-jv2g-vpx6
+    events:
+      - timestamp: 2024-02-23T07:53:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zarf
+            componentID: d02de61363f8b25e
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.1
+            componentType: go-module
+            componentLocation: /usr/bin/zarf
+            scanner: grype
+      - timestamp: 2024-02-26T22:53:37Z
+        type: fixed
+        data:
+          fixed-version: 0.32.4-r0
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T12:20:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zarf
+            componentID: 4ab1fc51622198e4
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/zarf
+            scanner: grype
+      - timestamp: 2024-03-14T15:21:23Z
+        type: fixed
+        data:
+          fixed-version: 0.32.5-r1
 
   - id: GHSA-9763-4f94-gfch
     events:

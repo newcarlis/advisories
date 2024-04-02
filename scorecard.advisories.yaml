@@ -59,6 +59,24 @@ advisories:
         data:
           fixed-version: 4.13.1-r1
 
+  - id: CVE-2023-45289
+    aliases:
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T08:01:27Z
+        type: fixed
+        data:
+          fixed-version: 4.13.1-r2
+
+  - id: CVE-2023-45290
+    aliases:
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T08:01:29Z
+        type: fixed
+        data:
+          fixed-version: 4.13.1-r2
+
   - id: CVE-2023-48795
     aliases:
       - GHSA-45x7-px36-x8w8
@@ -174,6 +192,67 @@ advisories:
             componentID: ffedf2606df6390e
             componentName: github.com/moby/buildkit
             componentVersion: v0.12.2
+            componentType: go-module
+            componentLocation: /usr/bin/scorecard
+            scanner: grype
+
+  - id: CVE-2024-24557
+    aliases:
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-22T13:33:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: scorecard
+            componentID: 8fd9f63738b717a6
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.4+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/scorecard
+            scanner: grype
+
+  - id: CVE-2024-24783
+    aliases:
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T08:01:33Z
+        type: fixed
+        data:
+          fixed-version: 4.13.1-r2
+
+  - id: CVE-2024-24784
+    aliases:
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T08:01:26Z
+        type: fixed
+        data:
+          fixed-version: 4.13.1-r2
+
+  - id: CVE-2024-24785
+    aliases:
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T08:01:31Z
+        type: fixed
+        data:
+          fixed-version: 4.13.1-r2
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T13:19:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: scorecard
+            componentID: 142c6372ad146582
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
             componentType: go-module
             componentLocation: /usr/bin/scorecard
             scanner: grype

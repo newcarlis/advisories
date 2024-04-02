@@ -4,6 +4,28 @@ package:
   name: kots
 
 advisories:
+  - id: CVE-2019-25210
+    aliases:
+      - GHSA-jw44-4f3j-q396
+    events:
+      - timestamp: 2024-03-06T07:23:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kots
+            componentID: 9654f4d876569324
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.2
+            componentType: go-module
+            componentLocation: /usr/bin/kots
+            scanner: grype
+      - timestamp: 2024-03-15T00:01:45Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
+
   - id: CVE-2020-26290
     aliases:
       - GHSA-m9hp-7r99-94h5
@@ -137,6 +159,24 @@ advisories:
         data:
           fixed-version: 1.107.0-r1
 
+  - id: CVE-2024-24557
+    aliases:
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-25T16:41:27Z
+        type: fixed
+        data:
+          fixed-version: 1.108.2-r0
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-19T22:48:46Z
+        type: fixed
+        data:
+          fixed-version: 1.108.1-r0
+
   - id: CVE-2024-25620
     aliases:
       - GHSA-v53g-5gjp-272r
@@ -158,6 +198,78 @@ advisories:
         data:
           fixed-version: 1.107.4-r0
 
+  - id: CVE-2024-26147
+    aliases:
+      - GHSA-r53h-jv2g-vpx6
+    events:
+      - timestamp: 2024-02-23T07:14:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kots
+            componentID: f42fd730b0886c33
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.1
+            componentType: go-module
+            componentLocation: /usr/bin/kots
+            scanner: grype
+      - timestamp: 2024-02-23T23:02:08Z
+        type: fixed
+        data:
+          fixed-version: 1.107.7-r0
+
+  - id: CVE-2024-27289
+    aliases:
+      - GHSA-m7wr-2xf7-cm9p
+    events:
+      - timestamp: 2024-03-13T07:11:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kots
+            componentID: 3b7930f052012ac0
+            componentName: github.com/jackc/pgx/v4
+            componentVersion: v4.18.1
+            componentType: go-module
+            componentLocation: /usr/bin/kotsadm
+            scanner: grype
+      - timestamp: 2024-03-19T22:48:57Z
+        type: fixed
+        data:
+          fixed-version: 1.108.1-r0
+
+  - id: CVE-2024-27304
+    aliases:
+      - GHSA-mrww-27vc-gghv
+    events:
+      - timestamp: 2024-03-19T22:48:38Z
+        type: fixed
+        data:
+          fixed-version: 1.108.1-r0
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:15:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kots
+            componentID: 1709c823c2128753
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/kots
+            scanner: grype
+      - timestamp: 2024-03-08T21:01:29Z
+        type: fixed
+        data:
+          fixed-version: 1.108.0-r2
+
   - id: GHSA-2c7c-3mj9-8fqh
     events:
       - timestamp: 2023-11-22T16:40:24Z
@@ -172,6 +284,13 @@ advisories:
         data:
           type: vulnerable-code-version-not-used
           note: Vulnerability exists only on Windows.
+
+  - id: GHSA-7jwh-3vrq-q3m8
+    events:
+      - timestamp: 2024-03-19T22:48:52Z
+        type: fixed
+        data:
+          fixed-version: 1.108.1-r0
 
   - id: GHSA-7ww5-4wqc-m92c
     events:

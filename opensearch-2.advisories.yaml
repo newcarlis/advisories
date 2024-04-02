@@ -32,6 +32,44 @@ advisories:
         data:
           fixed-version: 2.10.0-r1
 
+  - id: CVE-2024-21742
+    aliases:
+      - GHSA-jw7r-rxff-gv24
+    events:
+      - timestamp: 2024-02-28T07:23:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-2-ingest-attachment
+            componentID: e72cbd4941137157
+            componentName: apache-mime4j-core
+            componentVersion: 0.8.8
+            componentType: java-archive
+            componentLocation: /usr/share/opensearch/plugins/opensearch-ingest-attachment/apache-mime4j-core-0.8.8.jar
+            scanner: grype
+
+  - id: CVE-2024-25710
+    aliases:
+      - GHSA-4g9r-vxhx-9pgx
+    events:
+      - timestamp: 2024-03-01T07:19:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-2-ml-commons
+            componentID: 2d079fd65eb2c423
+            componentName: commons-compress
+            componentVersion: 1.25.0
+            componentType: java-archive
+            componentLocation: /usr/share/opensearch/plugins/opensearch-ml/commons-compress-1.25.0.jar
+            scanner: grype
+      - timestamp: 2024-03-15T00:23:46Z
+        type: fixed
+        data:
+          fixed-version: 2.12.0-r1
+
   - id: CVE-2024-26308
     aliases:
       - GHSA-4265-ccf5-phj5
@@ -47,4 +85,42 @@ advisories:
             componentVersion: 1.24.0
             componentType: java-archive
             componentLocation: /usr/share/opensearch/lib/tools/plugin-cli/commons-compress-1.24.0.jar
+            scanner: grype
+      - timestamp: 2024-03-15T00:23:46Z
+        type: fixed
+        data:
+          fixed-version: 2.12.0-r1
+
+  - id: CVE-2024-28752
+    aliases:
+      - GHSA-qmgx-j96g-4428
+    events:
+      - timestamp: 2024-03-19T09:08:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-2-security
+            componentID: 52a961a22760ca4d
+            componentName: cxf-core
+            componentVersion: 4.0.3
+            componentType: java-archive
+            componentLocation: /usr/share/opensearch/plugins/opensearch-security/cxf-core-4.0.3.jar
+            scanner: grype
+
+  - id: CVE-2024-29025
+    aliases:
+      - GHSA-5jpm-x58v-624v
+    events:
+      - timestamp: 2024-03-31T13:28:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-2-repository-azure
+            componentID: 9293931f36f599bb
+            componentName: netty-codec-http
+            componentVersion: 4.1.106.Final
+            componentType: java-archive
+            componentLocation: /usr/share/opensearch/plugins/opensearch-repository-azure/netty-codec-http-4.1.106.Final.jar
             scanner: grype

@@ -4,6 +4,28 @@ package:
   name: cert-manager-1.13
 
 advisories:
+  - id: CVE-2019-25210
+    aliases:
+      - GHSA-jw44-4f3j-q396
+    events:
+      - timestamp: 2024-03-06T07:12:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cmctl-1.13
+            componentID: 9e52fb76e7c198d1
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.2
+            componentType: go-module
+            componentLocation: /usr/bin/cmctl
+            scanner: grype
+      - timestamp: 2024-03-26T16:35:18Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
+
   - id: CVE-2023-44487
     aliases:
       - GHSA-m425-mq94-257g
@@ -77,6 +99,31 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/cmctl
             scanner: grype
+      - timestamp: 2024-02-22T17:45:29Z
+        type: fixed
+        data:
+          fixed-version: 1.13.3-r3
+
+  - id: CVE-2024-26147
+    aliases:
+      - GHSA-r53h-jv2g-vpx6
+    events:
+      - timestamp: 2024-02-23T07:17:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cmctl-1.13
+            componentID: 3012c3d7648f7741
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.1
+            componentType: go-module
+            componentLocation: /usr/bin/cmctl
+            scanner: grype
+      - timestamp: 2024-02-23T17:49:42Z
+        type: fixed
+        data:
+          fixed-version: 1.13.4-r0
 
   - id: GHSA-2c7c-3mj9-8fqh
     events:

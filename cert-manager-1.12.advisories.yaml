@@ -4,6 +4,28 @@ package:
   name: cert-manager-1.12
 
 advisories:
+  - id: CVE-2019-25210
+    aliases:
+      - GHSA-jw44-4f3j-q396
+    events:
+      - timestamp: 2024-03-06T07:14:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cmctl-1.12
+            componentID: 9e52fb76e7c198d1
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.2
+            componentType: go-module
+            componentLocation: /usr/bin/cmctl
+            scanner: grype
+      - timestamp: 2024-03-26T16:35:18Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
+
   - id: CVE-2020-8552
     aliases:
       - GHSA-82hx-w2r5-c2wq
@@ -61,6 +83,32 @@ advisories:
         data:
           fixed-version: 1.12.7-r2
 
+  - id: CVE-2024-24557
+    aliases:
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-25T10:04:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cmctl-1.12
+            componentID: 69719a35eed06ed4
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.7+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/cmctl
+            scanner: grype
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:04:01Z
+        type: fixed
+        data:
+          fixed-version: 1.12.9-r0
+
   - id: CVE-2024-25620
     aliases:
       - GHSA-v53g-5gjp-272r
@@ -81,6 +129,27 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.12.7-r4
+
+  - id: CVE-2024-26147
+    aliases:
+      - GHSA-r53h-jv2g-vpx6
+    events:
+      - timestamp: 2024-02-23T07:21:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cmctl-1.12
+            componentID: 3012c3d7648f7741
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.1
+            componentType: go-module
+            componentLocation: /usr/bin/cmctl
+            scanner: grype
+      - timestamp: 2024-02-23T17:49:46Z
+        type: fixed
+        data:
+          fixed-version: 1.12.8-r0
 
   - id: GHSA-7ww5-4wqc-m92c
     events:

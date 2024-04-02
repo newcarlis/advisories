@@ -60,6 +60,78 @@ advisories:
         data:
           fixed-version: 1.14.8-r1
 
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T15:21:22Z
+        type: fixed
+        data:
+          fixed-version: 1.14.10-r4
+
+  - id: CVE-2024-27289
+    aliases:
+      - GHSA-m7wr-2xf7-cm9p
+    events:
+      - timestamp: 2024-03-06T01:42:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-1.14
+            componentID: ad5c3ba04918569e
+            componentName: github.com/jackc/pgx
+            componentVersion: v3.3.0+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/vault
+            scanner: grype
+      - timestamp: 2024-03-06T18:59:29Z
+        type: fixed
+        data:
+          fixed-version: 1.14.10-r2
+
+  - id: CVE-2024-27304
+    aliases:
+      - GHSA-mrww-27vc-gghv
+    events:
+      - timestamp: 2024-03-06T01:42:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-1.14
+            componentID: ad5c3ba04918569e
+            componentName: github.com/jackc/pgx
+            componentVersion: v3.3.0+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/vault
+            scanner: grype
+      - timestamp: 2024-03-06T18:59:29Z
+        type: fixed
+        data:
+          fixed-version: 1.14.10-r2
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:23:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-1.14
+            componentID: 696c316ae5716076
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/vault
+            scanner: grype
+      - timestamp: 2024-03-08T10:44:27Z
+        type: fixed
+        data:
+          fixed-version: 1.14.10-r3
+
   - id: GHSA-2c7c-3mj9-8fqh
     events:
       - timestamp: 2023-11-23T11:48:10Z

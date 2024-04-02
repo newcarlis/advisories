@@ -133,6 +133,33 @@ advisories:
         data:
           fixed-version: 2.442-r0
 
+  - id: CVE-2024-22243
+    aliases:
+      - GHSA-ccgv-vj62-xf9h
+    events:
+      - timestamp: 2024-02-25T07:20:24Z
+        type: fixed
+        data:
+          fixed-version: 2.446-r0
+
+  - id: CVE-2024-22257
+    aliases:
+      - GHSA-f3jh-qvm4-mg39
+    events:
+      - timestamp: 2024-03-19T18:01:55Z
+        type: fixed
+        data:
+          fixed-version: 2.450-r0
+
+  - id: CVE-2024-22259
+    aliases:
+      - GHSA-hgjh-9rj2-g67j
+    events:
+      - timestamp: 2024-03-19T18:01:59Z
+        type: fixed
+        data:
+          fixed-version: 2.450-r0
+
   - id: CVE-2024-23897
     aliases:
       - GHSA-6f9g-cxwr-q5jr
@@ -163,6 +190,15 @@ advisories:
         data:
           fixed-version: 2.443-r0
 
+  - id: CVE-2024-25710
+    aliases:
+      - GHSA-4g9r-vxhx-9pgx
+    events:
+      - timestamp: 2024-03-01T07:12:39Z
+        type: fixed
+        data:
+          fixed-version: 2.447-r0
+
   - id: CVE-2024-26308
     aliases:
       - GHSA-4265-ccf5-phj5
@@ -179,6 +215,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/jenkins/jenkins.war
             scanner: grype
+      - timestamp: 2024-02-27T20:07:10Z
+        type: fixed
+        data:
+          fixed-version: 2.447-r0
 
   - id: GHSA-58qw-p7qm-5rvh
     events:

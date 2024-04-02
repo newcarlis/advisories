@@ -4,6 +4,27 @@ package:
   name: cilium-cli
 
 advisories:
+  - id: CVE-2019-25210
+    aliases:
+      - GHSA-jw44-4f3j-q396
+    events:
+      - timestamp: 2024-03-06T19:02:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-cli
+            componentID: ca9168bfd81f2319
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.2
+            componentType: go-module
+            componentLocation: /usr/bin/cilium
+            scanner: grype
+      - timestamp: 2024-03-15T23:03:35Z
+        type: fixed
+        data:
+          fixed-version: 0.16.2-r0
+
   - id: CVE-2023-45283
     aliases:
       - GHSA-vvjp-q62m-2vph
@@ -33,6 +54,15 @@ advisories:
         data:
           fixed-version: 0.15.20-r0
 
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:05:41Z
+        type: fixed
+        data:
+          fixed-version: 0.16.1-r0
+
   - id: CVE-2024-25620
     aliases:
       - GHSA-v53g-5gjp-272r
@@ -53,6 +83,44 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.15.23-r1
+
+  - id: CVE-2024-26147
+    aliases:
+      - GHSA-r53h-jv2g-vpx6
+    events:
+      - timestamp: 2024-02-23T07:47:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-cli
+            componentID: 3f7aebe11650217a
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.1
+            componentType: go-module
+            componentLocation: /usr/bin/cilium
+            scanner: grype
+      - timestamp: 2024-02-23T10:18:59Z
+        type: fixed
+        data:
+          fixed-version: 0.15.23-r2
+
+  - id: CVE-2024-29018
+    aliases:
+      - GHSA-mq39-4gv4-mvpx
+    events:
+      - timestamp: 2024-03-25T09:22:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-cli
+            componentID: 8758da7de28199e7
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.3+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/cilium
+            scanner: grype
 
   - id: GHSA-7ww5-4wqc-m92c
     events:

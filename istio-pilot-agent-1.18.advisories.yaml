@@ -4,6 +4,28 @@ package:
   name: istio-pilot-agent-1.18
 
 advisories:
+  - id: CVE-2019-25210
+    aliases:
+      - GHSA-jw44-4f3j-q396
+    events:
+      - timestamp: 2024-03-06T07:15:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-agent-1.18
+            componentID: 55d655371cc66bd4
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.11.2
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-agent
+            scanner: grype
+      - timestamp: 2024-03-26T16:35:18Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
+
   - id: CVE-2019-3826
     aliases:
       - GHSA-3m87-5598-2v4f
@@ -53,6 +75,40 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45289
+    aliases:
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T08:10:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-agent-1.18
+            componentID: 6db5273ce40722e3
+            componentName: stdlib
+            componentVersion: go1.21.6
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-agent
+            scanner: grype
+
+  - id: CVE-2023-45290
+    aliases:
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T08:11:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-agent-1.18
+            componentID: 6db5273ce40722e3
+            componentName: stdlib
+            componentVersion: go1.21.6
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-agent
+            scanner: grype
+
   - id: CVE-2023-48795
     aliases:
       - GHSA-45x7-px36-x8w8
@@ -92,6 +148,57 @@ advisories:
         data:
           fixed-version: 1.18.7-r2
 
+  - id: CVE-2024-24783
+    aliases:
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T08:11:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-agent-1.18
+            componentID: 6db5273ce40722e3
+            componentName: stdlib
+            componentVersion: go1.21.6
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-agent
+            scanner: grype
+
+  - id: CVE-2024-24784
+    aliases:
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T08:11:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-agent-1.18
+            componentID: 6db5273ce40722e3
+            componentName: stdlib
+            componentVersion: go1.21.6
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-agent
+            scanner: grype
+
+  - id: CVE-2024-24785
+    aliases:
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T08:11:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-agent-1.18
+            componentID: 6db5273ce40722e3
+            componentName: stdlib
+            componentVersion: go1.21.6
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-agent
+            scanner: grype
+
   - id: CVE-2024-25620
     aliases:
       - GHSA-v53g-5gjp-272r
@@ -105,6 +212,40 @@ advisories:
             componentID: 55d655371cc66bd4
             componentName: helm.sh/helm/v3
             componentVersion: v3.11.2
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-agent
+            scanner: grype
+
+  - id: CVE-2024-26147
+    aliases:
+      - GHSA-r53h-jv2g-vpx6
+    events:
+      - timestamp: 2024-02-23T07:06:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-agent-1.18
+            componentID: 55d655371cc66bd4
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.11.2
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-agent
+            scanner: grype
+
+  - id: CVE-2024-28122
+    aliases:
+      - GHSA-hj3v-m684-v259
+    events:
+      - timestamp: 2024-03-09T07:43:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-agent-1.18
+            componentID: 3bcff3defc5ecc94
+            componentName: github.com/lestrrat-go/jwx
+            componentVersion: v1.2.28
             componentType: go-module
             componentLocation: /usr/bin/pilot-agent
             scanner: grype
